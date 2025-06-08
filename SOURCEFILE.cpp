@@ -118,7 +118,7 @@ void deletebyNIM(long nim) {
 }
 
 void menu() {
-    cout << "\n1. Memasukkan data \n2. Hapus data terdepan (Dequeue) \n3. Update data \n4. Hapus data Berdasarkan NIM \n5. Print data \n6. Exit ";
+    cout << "\n1. Memasukkan data \n2. Hapus data terdepan (Dequeue) \n3. Update data \n4. Hapus data Berdasarkan NIM \n5. Print data \n6. Search Data Berdasarkan NIM \n7.Exit ";
     cout << "\nMasukkan operasi yang akan dilakukan: ";
     cin >> choice;
 
@@ -149,7 +149,12 @@ void menu() {
         case 5:
             printAll();
             break;
-        case 6:
+         case 6:
+            cout<<"Masukkan NIM yang ingin Dicari: ";
+            cin >> NIM;
+            search(NIM);
+            break;
+        case 7:
             cout << "Program Shutdown...";
             keluar = 1;
             break;
