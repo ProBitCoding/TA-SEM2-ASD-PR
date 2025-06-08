@@ -122,9 +122,9 @@ void search(long nim) {
     while (current != nullptr) {
         if (current->nim == nim) {
             
-            cout << "Menampilkan Mahasiswa Dengan NIM: "<< current->nim;
-            cout << " Nama Mahasiswa: "<< current->nama;
-            cout << "Jenis kelamin Mahasiswa: " << current->kelamin;
+            cout << "Menampilkan Mahasiswa Dengan NIM: "<< current->nim<<endl;
+            cout << " Nama Mahasiswa: "<< current->nama<<endl;
+            cout << "Jenis kelamin Mahasiswa: " << current->kelamin<<endl;
             return;
         }
         current = current->next;
