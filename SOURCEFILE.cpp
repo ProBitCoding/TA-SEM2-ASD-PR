@@ -117,6 +117,22 @@ void deletebyNIM(long nim) {
     cout << "Data dengan NIM " << nim << " tidak ditemukan.\n";
 }
 
+void search(long nim) {
+    node *current = head;
+    while (current != nullptr) {
+        if (current->nim == nim) {
+            
+            cout << "Menampilkan Mahasiswa Dengan NIM: "<< current->nim;
+            cout << " Nama Mahasiswa: "<< current->nama;
+            cout << "Jenis kelamin Mahasiswa: " << current->kelamin;
+            return;
+        }
+        current = current->next;
+    }
+    cout << "Data dengan NIM " << nim << " tidak ditemukan.\n";
+}
+
+
 void menu() {
     cout << "\n1. Memasukkan data \n2. Hapus data terdepan (Dequeue) \n3. Update data \n4. Hapus data Berdasarkan NIM \n5. Print data \n6. Search Data Berdasarkan NIM \n7.Exit ";
     cout << "\nMasukkan operasi yang akan dilakukan: ";
@@ -163,20 +179,6 @@ void menu() {
     }
 }
 
-void search(long nim) {
-    node *current = head;
-    while (current != nullptr) {
-        if (current->nim == nim) {
-            
-            cout << "Menampilkan Mahasiswa Dengan NIM: "<< current->nim;
-            cout << " Nama Mahasiswa: "<< current->nama;
-            cout << "Jenis kelamin Mahasiswa: " << current->kelamin;
-            return;
-        }
-        current = current->next;
-    }
-    cout << "Data dengan NIM " << nim << " tidak ditemukan.\n";
-}
 
 int main(){
     do{menu();} while (keluar==0);
